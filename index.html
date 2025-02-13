@@ -5,15 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Valentine's Day 💖</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .valentine-card {
+            background-color: #fff5f5;
+            border: 2px solid #ff6b6b;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #ff5252;
+        }
+
+        #message {
+            font-size: 18px;
+            color: #333;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Happy Valentine's Day! 💕</h1>
         <p>To Preem Rujipat,</p>
-        <p id="message">ขอให้วันนี้เป็นวันที่เต็มไปด้วยความรักและความสุขนะครับ! 😘</p>
-        <p id="message">14/02/2025</p>
-        <button onclick="showSurprise()">See more</button>
-        <div class="hearts"></div>
+        <div class="valentine-card">
+            <p id="message">ขอให้วันนี้เป็นวันที่เต็มไปด้วยความรักและความสุขนะครับ! 😘</p>
+            <div class="button-container">
+                <button onclick="showSurprise()">See more</button>
+                <button id="backButton" onclick="goBack()" style="display: none;">Back</button>
+            </div>
+            <div class="hearts"></div>
+        </div>
     </div>
 
     <audio id="loveSong" src="love.mp3"></audio>
