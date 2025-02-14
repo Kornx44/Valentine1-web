@@ -45,6 +45,33 @@
             color: #333;
             margin: 20px 0;
         }
+
+        #loginSection {
+            margin: 20px 0;
+        }
+        
+        #pinInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff6b6b;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        
+        #loginSection button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        #loginSection button:hover {
+            background-color: #ff5252;
+        }
     </style>
 </head>
 <body>
@@ -52,11 +79,18 @@
         <h1>Happy Valentine's Day! 💕</h1>
         <p>To Preem Rujipat,</p>
         <div class="valentine-card">
-            <p id="message">ขอให้วันนี้เป็นวันที่เต็มไปด้วยความรักและความสุขนะครับ! 😘</p>
-            <p id="message">14/02/2025</p>
-            <div class="button-container">
-                <button onclick="showSurprise()">See more</button>
-                <button id="backButton" onclick="goBack()" style="display: none;">Back</button>
+            <div id="loginSection">
+                <p>วันแรกที่คบกันคือวันที่เท่าไหร่</p>
+                <input type="password" id="pinInput" maxlength="8" placeholder="Enter PIN"><br>
+                <button onclick="checkPin()">Submit</button>
+            </div>
+            <div id="messageSection" style="display: none;">
+                <p id="message">ขอให้วันนี้เป็นวันที่เต็มไปด้วยความรักและความสุขนะครับ! 😘</p>
+                <p id="message">14/02/2025</p>
+                <div class="button-container">
+                    <button onclick="showSurprise()">See more</button>
+                    <button id="backButton" onclick="goBack()" style="display: none;">Back</button>
+                </div>
             </div>
             <div class="hearts"></div>
         </div>
