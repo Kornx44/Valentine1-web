@@ -38,3 +38,16 @@ function goBack() {
     // Reset any other changes made by showSurprise()
     // ... add other reset code if needed ...
 }
+
+function checkPin() {
+    const correctPin = "07112567";
+    const enteredPin = document.getElementById("pinInput").value;
+    
+    if (enteredPin === correctPin) {
+        document.getElementById("loginSection").style.display = "none";
+        document.getElementById("messageSection").style.display = "block";
+    } else {
+        alert("Incorrect PIN. Please try again!");
+        document.getElementById("pinInput").value = "";
+    }
+}
